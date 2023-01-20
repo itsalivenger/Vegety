@@ -1,0 +1,14 @@
+/* Global COLORS */
+$primary-color: #41ab49;
+$secondary-color: #f78320;
+$text-color: black;
+$global-font: #333;
+a{
+    text-decoration: none;
+}
+
+@mixin centerElement(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

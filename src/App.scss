@@ -1,0 +1,184 @@
+@use 'index';
+$icons-color: gray;
+$gray-hover-color: rgb(230, 228, 228);
+
+%navbarAlignment{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.globalNavbar {
+    @extend %navbarAlignment;
+    padding: 1em 2em;
+    margin: 1em 0;
+    color: index.$text-color;
+    background-color: #111;
+    width: 100%;
+
+    .logoContainerInNav{
+        width: 100px;
+    }
+
+    .linksInputIcons{
+        width: 85%;
+        @extend %navbarAlignment;
+        
+        .closeBtnContainer{
+            display: none;
+        }
+    }
+
+    .linksInNavContainer{
+        @extend %navbarAlignment;
+        gap: 2em;
+
+        .linksInNav{
+            color: white;
+            transition: color .3s;
+            font-weight: 500;
+            position: relative;
+            
+            .dropdownMenu{
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                border-radius: 5px;
+                border: 1px solid black;
+                display: none;
+                overflow: hidden;
+
+                .dropdownLinks{
+                    padding: 1em 1.5em;
+                }
+
+                .dropdownLinks:hover{
+                    background-color: $gray-hover-color;
+                }
+            }
+        }
+
+        .linksInNav:hover{
+            color: index.$secondary-color;
+            
+            .dropdownMenu{
+                display: flex;
+            }
+        }
+    }
+
+    .searchBarContainer{
+        background-color: white;
+        padding: .5em;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+
+        .searchIcon{
+            border-right: 1px solid $icons-color;
+            padding-right: 5px;
+            margin-right: 5px;
+        }
+        
+        input, input:focus{
+            border: none;
+            outline: none;
+            height: 1em;
+        }
+    }
+
+    .searchBarContainer:focus, .searchBarContainer:active {
+        border: solid 1px black;
+    }
+
+    .iconsContainer{
+        @extend %navbarAlignment;
+        gap: 1em;
+
+        .itemsCount{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 3px;
+            border-radius: 50%;
+            background-color: index.$secondary-color;
+        }
+
+        .iconsContainersInNav{
+            background-color: white;
+            transition: background-color .2s;
+            padding: .5em .7em;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+
+            .material-symbols-outlined{
+                color: $icons-color;
+            }
+        }
+
+        .iconsContainersInNav:hover{
+            background-color: $gray-hover-color;
+            i{
+                color: rgb(97, 97, 97);
+            }
+        }
+    }
+
+    .toggleMenuBtn > div{
+        border: 1px solid white;
+        width: 25px;
+        margin: 5px 0;
+    }
+
+    .toggleMenuBtn{
+        display: none;
+    }
+
+    .toggleMenuBtn:hover{
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .globalNavbar{
+        margin: 0;
+        padding: 0;
+
+        .linksInputIcons{
+            flex-direction: column-reverse;
+            justify-content: center !important;
+            overflow: hidden;
+            background: #111;
+            width: 0;
+            height: 100vh;
+            transition: width .5s;
+            position: absolute;
+            left: 0;
+            top: 0;
+            gap: 3em;
+
+            .linksInNavContainer{
+                flex-direction: column;
+            }
+        }
+
+        .linksInputIconsToggled{
+            width: 80%!important;
+        }
+
+        .closeBtnContainer{
+            display: block!important;
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: white;
+            padding: 1em 1em 0 0;
+        }
+
+        .toggleMenuBtn{
+            display: block;
+        }
+    }
+}
