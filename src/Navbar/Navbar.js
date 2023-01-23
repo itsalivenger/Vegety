@@ -1,9 +1,8 @@
-import "./App.scss";
-import { lazy, Suspense, useState } from 'react';
-import Loading from './comps/loading';
-import SearchBar from './comps/searchBar';
-import logo from './comps/images/vegety.png';
-const Logo = lazy(()=> import("./comps/image"));
+import "./Navbar.scss";
+import { lazy, useState } from 'react';
+import SearchBar from '../comps/searchBar';
+import logo from '../comps/logoComponent';
+const Logo = lazy(()=> import("../comps/image"));
 
 function Navbar() {
   let [ toggleClass, setToggleClass ] = useState("linksInputIcons");
@@ -16,13 +15,7 @@ function Navbar() {
 
   return (
     <nav className="globalNavbar">
-      <div className="logoContainerInNav">
-        <Suspense fallback={<Loading />}>
-          <a href='./home.html'>
-            <Logo alt={"Logo Image"} classname={"logoImage"} src={logo} />
-          </a>
-        </Suspense>
-      </div>
+      <Logo alt={"Logo Image"} classname={"logoImage"} src={logo} />
 
       <div className={"linksInputIcons " + toggleClass}>
         <div className="linksInNavContainer">
@@ -30,7 +23,7 @@ function Navbar() {
             Home
           </a>
           <div className="linksInNav">
-            <a className="linksInNav" href="./">Categories</a> <i className="fa fa-angle-down"></i>
+            <span className="linksInNav">Categories</span> <i className="fa fa-angle-down"></i>
             <div className="dropdownMenu">
               <a className="dropdownLinks" href="./">Fruits</a>
               <a className="dropdownLinks" href="./">Légumes</a>
@@ -39,7 +32,7 @@ function Navbar() {
             </div>
           </div>
           <a href="./" className="linksInNav">
-            Blog
+            Se Connecter
           </a>
           <a href="./" className="linksInNav">
             Services
@@ -50,7 +43,7 @@ function Navbar() {
         </div>
 
         <div className="searchBarContainer">
-          <span class="material-symbols-outlined searchIcon">
+          <span className="material-symbols-outlined searchIcon">
             search
           </span>
           <SearchBar />

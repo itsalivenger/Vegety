@@ -1,4 +1,4 @@
-@use 'index';
+@use '../index';
 $icons-color: gray;
 $gray-hover-color: rgb(230, 228, 228);
 
@@ -11,14 +11,8 @@ $gray-hover-color: rgb(230, 228, 228);
 .globalNavbar {
     @extend %navbarAlignment;
     padding: 1em 2em;
-    margin: 1em 0;
     color: index.$text-color;
-    background-color: #111;
     width: 100%;
-
-    .logoContainerInNav{
-        width: 100px;
-    }
 
     .linksInputIcons{
         width: 85%;
@@ -32,6 +26,7 @@ $gray-hover-color: rgb(230, 228, 228);
     .linksInNavContainer{
         @extend %navbarAlignment;
         gap: 2em;
+
 
         .linksInNav{
             color: white;
@@ -80,10 +75,8 @@ $gray-hover-color: rgb(230, 228, 228);
             padding-right: 5px;
             margin-right: 5px;
         }
-        
-        input, input:focus{
-            border: none;
-            outline: none;
+
+        input{
             height: 1em;
         }
     }
@@ -141,10 +134,11 @@ $gray-hover-color: rgb(230, 228, 228);
     }
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1040px){
     .globalNavbar{
         margin: 0;
-        padding: 0;
+        padding: 0 3em;
+        justify-content: space-between;
 
         .linksInputIcons{
             flex-direction: column-reverse;
@@ -154,9 +148,10 @@ $gray-hover-color: rgb(230, 228, 228);
             width: 0;
             height: 100vh;
             transition: width .5s;
-            position: absolute;
+            position: fixed;
             left: 0;
             top: 0;
+            z-index: 10;
             gap: 3em;
 
             .linksInNavContainer{
@@ -179,6 +174,15 @@ $gray-hover-color: rgb(230, 228, 228);
 
         .toggleMenuBtn{
             display: block;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1040px){
+    .globalNavbar{
+        .linksInputIconsToggled{
+            width: 100%!important;
         }
     }
 }

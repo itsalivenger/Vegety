@@ -1,0 +1,22 @@
+@use '../../index.scss';
+
+.VegetyButton{
+    border-radius: 20px;
+    border: 2px solid index.$secondary-color;
+    background-color: transparent;
+    transition: background-color .3s;
+    padding: .5em 1em;
+    color: white;
+}
+
+.VegetyButton:hover{
+    background-color: index.$secondary-color;
+}
+
+.secondary{
+    background-color: index.$secondary-color;
+}
+
+.secondary:hover{
+    background-color: #f59644;
+}

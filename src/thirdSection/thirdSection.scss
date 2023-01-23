@@ -1,0 +1,22 @@
+@use '../index.scss';
+
+.thirdSection{
+    background-color: index.$third-color;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    overflow: hidden;
+    
+    .sectionMenu > div{
+        margin: 5em 0;
+    }
+
+    .seeProductsBtnContainer{
+        display: flex;
+        justify-content: center;
+    }
+
+    .slider{
+        overflow: auto;
+    }
+}

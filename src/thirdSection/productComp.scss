@@ -1,0 +1,136 @@
+@use '../index.scss';
+
+.productsContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 1em;
+        
+    .products{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        background-color: white;
+        border-radius: 15px;
+        padding: 1.5em;
+        box-shadow: -7px 9px 24px -7px rgba(0,0,0,0.43);
+        -webkit-box-shadow: -7px 9px 24px -7px rgba(0,0,0,0.43);
+        -moz-box-shadow: -7px 9px 24px -7px rgba(0,0,0,0.43);
+        
+        .prodOptions{
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+
+        .productImageContainer{
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px 40px;
+            position: relative;
+            
+            .productImage{
+                width: 100%;
+                transition: transform .4s;
+            }
+
+            .productImage:hover{
+                transform: scale(1.1);
+            }
+
+            .ribbonContainer{
+                position: absolute;
+                top: 10px;
+                width: 20%;
+                color: white;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .red{
+                background: radial-gradient(#FF6347, #DC143C);
+            }
+
+            .orange{
+                background: radial-gradient(yellow, index.$secondary-color);
+            }
+        }
+        
+        .addWishListBtn{
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            z-index: 2;
+            background-color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color .4s;
+        }
+
+        .addWishListBtn:hover{
+            cursor: pointer;
+            background-color: #FF6347;
+
+            i{
+                color: #FFCCCB;
+            }
+        }
+
+        .productTitle{
+            display: flex;
+            justify-content: space-between;
+            font-size: large;
+            font-weight: bolder;
+        }
+        
+        .productRateAndAdd{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .addToCartBtn{
+            border-radius: 20px 0 0 0!important;
+            border: none!important;
+            padding: 1em 2em!important;
+        }
+
+        .rating{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1100px){
+    .productsContainer{
+        padding: 1%;
+        .products{
+            width: 40%;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .productsContainer{
+        width: 635%;
+        justify-content: space-around;
+        .products{
+            flex-direction: column;
+            width: 15%;
+            padding: 1em;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    
+}

@@ -1,0 +1,46 @@
+@use "../index";
+
+.footerTag{
+    background-color: index.$primary-color;
+    padding: 1em;
+
+    .footerContentContainer{
+        div{
+            margin: 2.5em;
+        }
+
+        div:nth-child(1){
+            margin: 0;
+        }
+    }
+
+    .CopyrightContent{
+        border-top: 2px solid;
+    }
+
+    .socialFooterContainer{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+
+    .fa-google {
+        background: #dd4b39;
+        color: white;
+    }
+
+    .fa-instagram {
+        background: #125688;
+        color: white;
+    }
+}
+
+.logoInFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
