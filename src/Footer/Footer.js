@@ -1,10 +1,12 @@
 import './footer.scss';
 import logo from '../comps/logoComponent';
 import LogoImage from '../comps/image';
+import NewsLetter from './newsLetter';
 
 export default function Footer() {
   return (
     <footer className="footerTag text-center text-lg-start text-white">
+      <NewsLetter />
       <div className="container text-center text-md-start mt-5">
         <div className="row mt-3 footerContentContainer">
           <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 logoInFooter">

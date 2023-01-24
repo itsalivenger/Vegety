@@ -1,0 +1,14 @@
+@use '../index.scss';
+
+.list{
+    display: flex;
+    gap: 2em;
+    .material-symbols-outlined{
+        color: index.$secondary-color;
+        width: 35px;
+        height: 35px;
+        border: solid 2px index.$secondary-color;
+        border-radius: 50%;
+        @include index.centerElement
+    }
+}

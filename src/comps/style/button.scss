@@ -13,6 +13,16 @@
     background-color: index.$secondary-color;
 }
 
+.primary{    
+    border: 2px solid #23992d;
+    background-color: index.$primary-color;
+}
+
+.primary:hover{    
+    // border: 2px solid #23992d;
+    background-color: #23992d;
+}
+
 .secondary{
     background-color: index.$secondary-color;
 }

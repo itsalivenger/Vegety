@@ -1,0 +1,30 @@
+.testimonials{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    align-items: center;
+    gap: 2em;
+
+    .avatarContainer{
+        width: 70%;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .nameAndSomeInfo{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .testimonials{
+        width: 15%;
+        .nameAndSomeInfo{
+            font-size: small;
+        }
+    }
+    
+}

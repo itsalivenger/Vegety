@@ -1,0 +1,82 @@
+@use '../index.scss';
+
+.slideshow-container {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, index.$primary-color, index.$secondary-color);
+
+    .content{
+        .backgroundDiv{
+            width: 100%;
+            height: 100%;
+            background-color: #00000056;
+            z-index: 2;
+            @include index.centerElement;
+            flex-direction: column;
+            gap: 2em;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            position: absolute;
+            top: 30%;
+            bottom: 0;
+            div{
+                width: 60%;
+            }
+        }
+    }
+
+    
+    .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 100%;
+        left: 100%;
+        transition: bottom 1s ease-in-out, left 1s ease-in-out;
+    }
+    
+    .slide.active {
+        bottom: 30%;
+        left: 0;
+    }
+
+
+}
+
+@media only screen and (max-width: 850px)  {
+    .slideshow-container{
+        height: 212px;
+
+        .content{
+            .backgroundDiv{
+                top: 0;
+                gap: 1em;
+                div{
+                    width: 90%;
+                    font-size: small;
+                }
+            }
+        }
+
+        .slide.active{
+            bottom: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 550px)  {
+    .slideshow-container{
+
+        .content{
+            .backgroundDiv{
+                gap: 0;
+                div{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

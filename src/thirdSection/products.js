@@ -1,4 +1,6 @@
 import img from '../images/apple.jpg';
+import img2 from '../images/banana.jpg';
+import img3 from '../images/peach.jpg';
 
 let products = [
     {
@@ -9,7 +11,7 @@ let products = [
         rating: 3,
     },
     {
-        imgSrc: img,
+        imgSrc: img2,
         title: "fireweed",
         desc: "camel case function to converts simple Lower case to Camel",
         price: 33,
@@ -17,7 +19,7 @@ let products = [
         ribbon: "sale"
     },
     {
-        imgSrc: img,
+        imgSrc: img3,
         title: "hellfire blossom",
         desc: "limit description length later so it won't mess with the layout",
         price: 100,
@@ -26,10 +28,10 @@ let products = [
 
     {
         imgSrc: img,
-        title: "flower of the sanctuary",
+        title: "dedrno of the sanctuary",
         desc: "can be found in the darkest pits of talador",
         price: 14,
-        rating: 3,
+        rating: 5,
         ribbon: "sale"
     },
     {

@@ -1,0 +1,113 @@
+@use '../index.scss';
+
+.fourthContent{
+        background: linear-gradient(to right, index.$primary-color, index.$secondary-color);
+        font-size: medium;
+        display: flex;
+    .textAndImg{
+        width: 50%;
+        color: white;
+    }
+
+    .titleAndText{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 2em;
+        padding: 2em;
+        
+        .checkList{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            .learnMoreBtn{
+                @include index.centerElement;
+            }
+        }
+    }
+
+    .imagesMasonry{
+        display: flex;
+        @include index.centerElement;
+        flex-direction: column;
+        gap: 1em;
+
+        .imgsRow{
+            display: flex;
+            gap: 1em;
+            width: 75%;
+            .imgContainer{
+                overflow: hidden;
+                border-radius: 20px;
+                height: fit-content;
+            }
+        }
+
+        .imgsRow:nth-child(1){
+            .imgContainer:nth-child(1){
+                width: 145%;
+            }
+        }
+
+        .images2{
+            .imgContainer:nth-child(2){
+                width: 185%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .fourthContent{
+        flex-direction: column-reverse;
+        .textAndImg{
+            width: 100%;
+            font-size: small;
+        }
+
+        .imagesMasonry{
+            .imgsRow{
+                display: flex;
+                gap: 1em;
+                width: 60%;
+            }
+    
+            .imgsRow:nth-child(1){
+                .imgContainer:nth-child(1){
+                    width: 145%;
+                }
+            }
+    
+            .images2{
+                .imgContainer:nth-child(2){
+                    width: 185%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .fourthContent{
+        .imagesMasonry{
+            .imgsRow{
+                padding: 1em;
+                display: flex;
+                gap: 1em;
+                width: 100%;
+            }
+
+            .imgsRow:nth-child(1){
+                .imgContainer:nth-child(1){
+                    width: auto;
+                }
+            }
+    
+            .images2{
+                .imgContainer:nth-child(2){
+                    width: auto;
+                }
+            }
+        }
+    }
+}

@@ -4,9 +4,9 @@ import ProductComp from "./productComp";
 import products from "./products";
 import "./thirdSection.scss";
 
-export default function ThirdSection() {
+let ThirdSection = ()=> {
   return (
-    <section className="sections thirdSection">
+    <section className="sections thirdContent">
       <TitleDescription
         title={"Produits Plus Populaires"}
         description={
@@ -34,3 +34,5 @@ export default function ThirdSection() {
     </section>
   );
 }
+
+export default ThirdSection;
