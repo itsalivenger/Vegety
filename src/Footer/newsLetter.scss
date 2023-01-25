@@ -1,0 +1,9 @@
+.newsLetterContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid whitesmoke;
+    padding: 1em;
+    gap: 1em;
+}

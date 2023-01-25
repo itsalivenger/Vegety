@@ -5,7 +5,7 @@ export default function Testimonial({ src, name, text }) {
   return (
     <div className='testimonials'>
         <div className='avatarContainer'>
-            <RspImage src={src} classname={""} alt="user" />
+            <RspImage src={src} alt={`Uilisateur ${name}`} />
         </div>
 
         <div className='nameAndSomeInfo'>

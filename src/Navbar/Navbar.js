@@ -1,6 +1,6 @@
 import "./Navbar.scss";
 import { lazy, useState } from 'react';
-import SearchBar from '../comps/searchBar';
+import VInput from "../comps/Vinput";
 import logo from '../comps/logoComponent';
 const Logo = lazy(()=> import("../comps/image"));
 
@@ -41,13 +41,10 @@ function Navbar() {
             A Propos
           </a>
         </div>
-
-        <div className="searchBarContainer">
-          <span className="material-symbols-outlined searchIcon">
+        <VInput type={"text"} placeholder='Rechercher des Produits' icon={
+          <span className="material-symbols-outlined IconInInput">
             search
-          </span>
-          <SearchBar />
-        </div>
+          </span>} />
 
         <div className="iconsContainer">
           <a href="./" className="iconsContainersInNav">

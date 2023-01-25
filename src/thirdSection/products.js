@@ -1,6 +1,9 @@
 import img from '../images/apple.jpg';
 import img2 from '../images/banana.jpg';
 import img3 from '../images/peach.jpg';
+import img4 from '../images/potato.jpg';
+import img5 from '../images/mint.jpg';
+import img6 from '../images/onion.jpg';
 
 let products = [
     {
@@ -27,7 +30,7 @@ let products = [
     },
 
     {
-        imgSrc: img,
+        imgSrc: img4,
         title: "dedrno of the sanctuary",
         desc: "can be found in the darkest pits of talador",
         price: 14,
@@ -35,13 +38,13 @@ let products = [
         ribbon: "sale"
     },
     {
-        imgSrc: img,
+        imgSrc: img5,
         title: "heaven feather",
         desc: "can be found in the darkest pits of talador",
         price: 70,
         rating: 3,
     },{
-        imgSrc: img,
+        imgSrc: img6,
         title: "magical scyth",
         desc: "can be found in the darkest pits of talador",
         price: 50,

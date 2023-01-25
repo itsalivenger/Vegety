@@ -9,21 +9,21 @@ export default function Footer() {
       <NewsLetter />
       <div className="container text-center text-md-start mt-5">
         <div className="row mt-3 footerContentContainer">
-          <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 logoInFooter">
+          <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 logoInFooter texts">
             <LogoImage src={logo} classname={""} alt={'logo in fooer'} />
             <p>
             Bienvenue chez Vegety, votre destination unique pour tous vos
             besoins en matière de courses.
             </p>
           </div>
-          <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 texts">
             <h6 className="text-uppercase fw-bold mb-4">Disponibilitée</h6>
             <p>Lundi-Samedi &nbrs; 8AM-8PM</p>
             <p>Les commandes proches en nuit sont acceptés</p>
             <p>Fermé en week-end</p>
             
           </div>
-          <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 texts">
             <h6 className="text-uppercase fw-bold mb-4">Liens</h6>
             <p>
               <a href="#!" className="text-reset">
@@ -46,7 +46,7 @@ export default function Footer() {
               </a>
             </p>
           </div>
-          <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 texts">
             <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
             <p>
               <i className="fa fa-home me-3"></i> New York, NY 10012, US
