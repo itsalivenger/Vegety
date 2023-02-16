@@ -9,6 +9,7 @@
         height: 35px;
         border: solid 2px index.$secondary-color;
         border-radius: 50%;
+        color: white;
         @include index.centerElement
     }
 }

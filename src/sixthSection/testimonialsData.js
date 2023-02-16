@@ -1,4 +1,4 @@
-import img1 from '../images/apple.jpg'
+import img1 from '../images/user.jpg'
 
 let test = [
     {
